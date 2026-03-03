@@ -1,0 +1,3 @@
+*.tar.gz
+*.h5
+lmd_matched/**/*
