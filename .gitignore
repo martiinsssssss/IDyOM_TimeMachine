@@ -4,3 +4,5 @@ lmd_matched/**/*
 data/
 IDyOM/
 all_midis/
+clean_monophonic_midis/
+test_data/
