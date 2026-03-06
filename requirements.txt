@@ -1,0 +1,14 @@
+os-sys
+pandas
+matplotlib
+seaborn
+python-math
+scipy
+scikit-learn
+statsmodels
+numpy
+pretty_midi
+pypi-json
+collection
+ruptures
+pathlib
