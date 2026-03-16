@@ -19,3 +19,4 @@ tar_5yr_window_out/
 tar_10yr_window_out/
 .TEMP/**/*
 
+.venv/
