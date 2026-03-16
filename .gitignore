@@ -12,3 +12,5 @@ models/
 out/
 tar_midis_by_5yr_window/
 .TEMP/**/*
+tar_midis_by_10yr_window/
+5yr_window_out/
