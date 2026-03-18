@@ -17,6 +17,7 @@ tar_midis_by_5yr_window/
 tar_midis_by_10yr_window/
 tar_5yr_window_out/
 tar_10yr_window_out/
+run_IDyOM.ipynb
 .TEMP/**/*
 
 .venv/
