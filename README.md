@@ -14,7 +14,7 @@ IDyOM TimeMachine is a computational musicology research project that studies ho
   - Supports configurable window size and step size
   
 - **`run_eras_idyom.py`**: Main analysis orchestrator
-  - Trains IDyOM models on consecutive 5-year windows
+  - Trains IDyOM models on consecutive 5-year and 10-year windows (when specifying the window size)
   - Evaluates surprisal on songs from new years only
   - Manages model cleanup and result persistence
   - Command-line interface with configurable parameters
@@ -28,15 +28,10 @@ IDyOM TimeMachine is a computational musicology research project that studies ho
   - Multiple trend charts (5-year, 10-year, cross-validation)
   - *Note: Additional plots and detailed analyses are available in this notebook*
 
-- **`run_IDyOM.ipynb`**: IDyOM model execution and results
+- **`run_IDyOM.ipynb`**: Rough draft IDyOM model execution and results
   - Model training and evaluation workflows
   - Result visualization and interpretation
   - *Additional plots and detailed diagnostics in this notebook*
-
-- **`dataset_preparation_lmd_matched.ipynb`**: Data preparation and preprocessing
-  - LMD (Million Song Dataset) matched MIDI preparation
-  - Data quality checks and cleaning
-  - Statistical summaries of the dataset
 
 - **`testing_requirements.ipynb`**: Environment validation
   - Verifies correct package installation
@@ -52,7 +47,12 @@ IDyOM TimeMachine is a computational musicology research project that studies ho
 
 - **`outlier analysis .xlsx`**: Detailed outlier analysis results
 
+- **`sound_examples/`**: Outlier songs exported as .mp3 files
+
+
 ## Getting Started
+
+All steps are detailed in `IDyOM_TimeMachine.ipynb`, but key environment setup instructions are detailed below:
 
 ### 1. Create a conda environment
 
@@ -72,23 +72,16 @@ IDyOM TimeMachine is a computational musicology research project that studies ho
 
 ## Usage Workflow
 
-### Step 1: Organize MIDI Files
+### Step 1: Git Clone dataset and IDyOMpy model
 ```bash
-python organize_midis_by_5yr.py
+git clone https://github.com/madelinehamilton/BiMMuDa.git data/
+git clone https://github.com/GuiMarion/IDyOMpy.git
 ```
-
-### Step 2: Run IDyOM Analysis
+### Step 2: Install IDyOM dependencies
 ```bash
-python run_eras_idyom.py [OPTIONS]
+cd IDyOM
+pip install -r requirements.txt
 ```
-
-**Options:**
-- `-d, --base_dir`: Directory containing 5-year MIDI windows (default: `midis_by_5yr_window`)
-- `-m, --models_dir`: Directory for trained models (default: `models`)
-- `-o, --out_dir`: Directory for IDyOM output files (default: `out`)
-- `-r, --results_dir`: Directory for result pickle files (default: `results`)
-- `-s, --step`: Step size used when building windows (default: 1)
-
 ### Step 3: Analyze Results
 Open and run the analysis notebooks:
 - `IDyOM_TimeMachine.ipynb` for main findings
